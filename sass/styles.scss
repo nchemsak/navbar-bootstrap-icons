@@ -1,0 +1,162 @@
+//color definitions
+$color-light-sea-green: #aed6ce;
+$color-sea-green: #0cb29c;
+$color-lightest-gray: #dfdfdf;
+$color-light-gray: #747474;
+$color-dark-gray: #4e4e4e;
+$color-gray-text: #666666;
+$color-orange: #fd8e34;
+
+//Definitions for responsive Bootstrap
+@mixin xs-only {
+    @media (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin sm {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media (min-width: 992px) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin xlg {
+    @media (min-width: 1700px) {
+        @content;
+    }
+}
+
+
+/////////////////////////////////// NAVBAR \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+// area above navbar
+.navbar {
+    margin-bottom: 0px;
+}
+
+.navbar-default .navbar-nav {
+
+    >li {
+        >a {
+
+            @include sm {
+                font-size: 12px;
+            }
+            @include md {
+                font-size: 16px;
+            }
+            @include lg {
+                font-size: 18px;
+            }
+
+            color: #fff; // width: 140px;
+            // max-width: auto;
+            height: 70px;
+            padding-top: 25px;
+            &:hover {
+                background-color: $color-light-sea-green;
+                // text-transform: uppercase;
+                transition: all .2s ease-in;
+            }
+        }
+    }
+}
+
+.navbar-default {
+    border: none;
+    border-radius: 0;
+    background-color: $color-sea-green;
+    -webkit-box-shadow: 10px 10px 22px -10px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 22px -10px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 22px -10px rgba(0, 0, 0, 0.75);
+    z-index: 5;
+}
+
+.navbar .nav {
+    margin: 0;
+    display: table;
+    width: 100%;
+}
+
+.navbar .nav>li {
+    display: table-cell;
+    width: auto;
+    float: none;
+}
+
+.navbar .nav li a {
+    text-align: center;
+}
+
+.navbar-collapse {
+    padding: 0;
+}
+
+.nav-contain {
+    padding: 0;
+}
+
+
+/*mobile nav bar*/
+
+@media screen and (max-width:768px) {
+    #icon-bar {
+        width: 100%;
+        background-color: $color-sea-green;
+        overflow: auto;
+        /*display: block;*/
+    }
+
+    #icon-bar a {
+        float: left;
+        text-align: center;
+        width: 33.1%;
+        transition: all 0.2s ease-in;
+        color: white;
+        font-size: 20px;
+        text-decoration: none;
+        padding: 20px 0 20px 0;
+    }
+
+    #icon-bar a:nth-child(2) {
+        border-right: 0.5px solid $color-light-sea-green;
+        border-left: 0.5px solid $color-light-sea-green;
+    }
+
+    #icon-bar a:hover {
+        background-color: $color-light-sea-green;
+        cursor: pointer;
+        color: $color-dark-gray;
+    }
+}
+
+#icon-bar {
+    display: none;
+}
+
+@media screen and (max-width:768px) {
+    #icon-bar {
+        display: block;
+    }
+
+    #nav {
+        /*display: none;*/
+        height: 0px;
+    }
+}
+
+
+h1 {
+    text-transform: uppercase;
+}
