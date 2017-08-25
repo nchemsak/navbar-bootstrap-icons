@@ -8,8 +8,8 @@
 
 <p align="center">
 <h2>Full size layout</h2>
-  <img src="images/fullwidth.jpg" width="450"/>
+  <img src="images/fullwidth.jpg" width="100%"/>
   <br />
   <h2>Mobile layout</h2>
-  <img src="images/mobile-view.JPG" width="350"/>
+  <img src="images/mobile-view.JPG" width="50%"/>
 </p>
